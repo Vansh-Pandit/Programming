@@ -1,5 +1,3 @@
-
-
 import csv
 import psutil
 import sys
@@ -155,8 +153,8 @@ def main():
             print("3 : It fetchs information about the Secondary storage as HDD")
             print("4 : It fetchs information about the Micro Processor")
             print("5 : It Gets auto schedule periodically")
-            print("6 : It maintains all records in Log file")
-            print("7 : It sends log file through mail periodically")
+            print("6 : It maintains all records in CSV file")
+            print("7 : It sends CSV file through mail periodically")
             
 
         elif(sys.argv[1] == "--u" or sys.argv[1] == "--U"):
