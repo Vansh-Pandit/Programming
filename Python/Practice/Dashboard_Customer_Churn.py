@@ -1,13 +1,25 @@
-import streamlit as st
+
 import pandas as pd
+import streamlit as st
 import joblib
+from pathlib import Path
 
 st.set_page_config(page_title="Marvellous Infosystem Dashboard")
 st.title("Marvellous Infosystem by Piyush Manohar Khernar")
 st.header("Customer Churn Prediction")
 st.write("Machine Learning Application Dashboard")
 
-model = joblib.load("Vansh-Pandit/Programming/Marvellous_ML_Customer_Churn.pkl")
+BASE_DIR = Path(__file__).resolve().parent
+
+MODEL_PATH = BASE_DIR / "Marvellous_ML_Customer_Churn.pkl"
+
+if not MODEL_PATH.exists():
+    st.error(f"Model file not found: {MODEL_PATH}")
+    st.stop()
+
+model = joblib.load(MODEL_PATH)
+
+
 
 st.subheader("Enter Customer details")
 
