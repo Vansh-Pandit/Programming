@@ -7,7 +7,7 @@ st.title("Marvellous Infosystem by Piyush Manohar Khernar")
 st.header("Customer Churn Prediction")
 st.write("Machine Learning Application Dashboard")
 
-model = joblib.load("Marvellous_ML_Customer_Churn.pkl")
+model = joblib.load("Vansh-Pandit/Programming/Marvellous_ML_Customer_Churn.pkl")
 
 st.subheader("Enter Customer details")
 
